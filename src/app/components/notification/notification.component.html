@@ -1,0 +1,16 @@
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript> 
+  
+  <div id='form-div'>
+    <form [formGroup]="form" (submit)="sendMessage()">
+            <input type="text" formControlName = "text" name="text" placeholder="Message"><br>
+        <button class="btn btn-default" type="submit">Send</button>
+      </form>
+      
+      <ul>
+        <div  id="list">
+          <li *ngFor="let message of messages">Message: {{message.text}}</li>
+        </div>
+      </ul>
+  </div>
